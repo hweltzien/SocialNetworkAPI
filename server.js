@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 mongoose.set('debug', true);
 
 app.use('/api/users', require('./routes/api/user-routes'));
-// app.use('/api/thoughts', require('./routes/api/thought-routes'));
+app.use('/api/thoughts', require('./routes/api/thought-routes'));
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
